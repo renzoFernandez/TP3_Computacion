@@ -10,3 +10,4 @@
 5)Copiar y pegar el contenido de Creacion de tabla.txt, en el shell y correr el script
 
 6)Levantar sam sam local start-api --docker-network awslocal
+(no pude subir la carpeta node_modules porque es demasiada pesada)
