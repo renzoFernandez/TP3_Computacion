@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2019-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: API de envios,Renzo Fernandez
+Resources:
+  Productos:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs12.x
+      Timeout: 100
+      Events:
+        Crear:
+          Type: Api
+          Properties:
+            Path: /envios
+            Method: post
+        Pendientes:
+          Type: Api
+          Properties:
+            Path: /envios/pendientes
+            Method: get
+        Entregados:
+          Type: Api
+          Properties:
+            Path: /envios/{idEnvio}/entregado
+            Method: put
